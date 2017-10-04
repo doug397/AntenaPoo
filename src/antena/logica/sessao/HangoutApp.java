@@ -17,7 +17,7 @@ public class HangoutApp {
 	public HangoutApp(){
 	}
 	
-	public void moverCelular(String id, double x, double y){
+	public void moverCelular(String id, double x, double y) throws Exception{
 		Set<Antena> antenasCobrem = this.cobrem(x, y);
 		double potencia = 0;
 		Antena escolhido = null;
@@ -45,7 +45,7 @@ public class HangoutApp {
 	}
 	
 	
-	public Set<Antena> cobrem(double x, double y){
+	public Set<Antena> cobrem(double x, double y) throws Exception{
 		Set<Antena> todas = this.antenaDAO.buscarTodas();
 		Set<Antena> hostsCobrem = new HashSet<Antena>();
 		for(Antena atual : todas){

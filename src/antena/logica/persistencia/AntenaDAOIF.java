@@ -5,10 +5,11 @@ import java.util.Set;
 import antena.logica.dominio.Antena;
 
 public interface AntenaDAOIF {
-	// Faltam mais algumas funcões
+
 	
-	public Set<Antena> buscarTodas();
-	public void atualizar(Antena antena);
+	public Set<Antena> buscarTodas() throws Exception;
+	public void atualizar(Antena antena) throws Exception;
+	public Antena buscarPeloId(String id) throws Exception;	
 	
 
 }
