@@ -7,6 +7,8 @@ import antena.logica.dominio.Antena;
 import antena.logica.dominio.Celular;
 import antena.logica.persistencia.AntenaDAOIF;
 import antena.logica.persistencia.CelularDAOIF;
+import antena.logica.persistencia.DBAntenaDAO;
+import antena.logica.persistencia.DBCelularDAO;
 
 public class HangoutApp {
 	
@@ -15,6 +17,8 @@ public class HangoutApp {
 	
 
 	public HangoutApp(){
+		this.antenaDAO=new DBAntenaDAO();
+		this.celularDAO=new DBCelularDAO();
 	}
 	
 	public void moverCelular(String id, double x, double y) throws Exception{
